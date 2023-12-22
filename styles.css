@@ -1,0 +1,261 @@
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 1.5rem;
+    scroll-behavior: smooth;
+    font-family: sans-serif;  
+    box-sizing: border-box;
+    font-family:'Josefin Sans', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    width: 20px;
+    background-color: black;
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(100, 100, 100, .5);       
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color:steelblue;    
+    border-radius: 20px;      
+}
+
+body::-webkit-scrollbar-thumb:hover {    
+    border: thin solid black; 
+} 
+
+body {
+    scrollbar-width: thin;
+    scrollbar-color:steelblue rgba(100, 100, 100, .5);
+}
+
+body {
+    -ms-overflow-style: none;
+}
+
+body::-ms-scrollbar {
+    width: 20px;
+}
+
+body::-ms-scrollbar-thumb {
+    background-color:steelblue;
+    border-radius: 20px;
+}
+
+body::-ms-scrollbar-thumb:hover {
+    border: thin solid black;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 15vh 85vh auto 85vh;
+    margin: 0;
+    padding: 0;   
+    background-image: url("images/background.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: soft-light;  
+    background-color: rgba(40, 0, 80, 0.5);
+    overflow-x: hidden;
+}
+
+[id] {
+    scroll-margin-top: 15vh;
+}
+
+ul {
+    background-color:rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    height: 15vh;
+    width: 100vw;
+    margin: 0;    
+    padding: 0;
+    position: fixed;
+    z-index: 10;
+}
+
+li {
+    display: flex;
+    margin: 1vw;        
+    border-radius: 10px;   
+    width: 18vw;
+    height: 8vh;
+    min-width: 180px;
+    text-align: center;
+    background-color:royalblue;   
+    align-items: center;
+    justify-content: center;
+    font-size: 1.4rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+li a:hover {   
+    color: cyan;
+}
+
+section {
+    margin: 0;  
+    color: aliceblue;
+    min-width: 600px;
+}
+
+header {  
+    margin: 0;    
+}
+
+#inicio {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+#foto {
+    border-radius: 50%;
+    height: 500px;
+    object-fit: cover; 
+}
+
+#descripcion-inicio {
+    text-align: center;
+    padding: 0 2rem;
+}
+
+#proyectos {
+    text-align: center;   
+    min-height: 85vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: fit-content;
+}
+
+.card {
+    background-color: rgba(40, 100, 100, 0.2);    
+    backdrop-filter: blur(6px);
+    width: 540px;
+    height: 420px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px darkcyan;
+    margin: 1rem;
+    padding: 1rem;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.imagen-proyecto {   
+    width: 350px;
+    height: 225px;
+    border-radius: 20px;
+    object-fit:fill;
+    transition: 0.5s;
+}
+
+.imagen-proyecto:hover {
+    transform: scale(1.05);
+    box-shadow: 4px 4px 16px mediumslateblue;
+}
+
+.descripcion {
+    height: 40px;
+}
+
+.descripcion p {
+    font-size: 0.7rem;
+    margin: 0;
+    height: 5rem;    
+}
+
+h4 {
+    margin: 0.3rem;
+}
+
+a h4:hover {
+    color: lightseagreen;
+}
+
+a h4:active {
+    color: lightblue;
+}
+
+.container-tecnologias {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.tecnologias {    
+    width: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.svg-tecnologias {
+    height: 1.1rem;
+}
+
+.tecnologias span {
+    font-size: 0.5rem;
+    margin-top: 4px;
+}
+
+
+#contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+}
+
+a i {
+    margin: .4rem;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    overflow: visible;
+    background-color: brown;
+    border-radius: 20px;
+    background-color: rgba(40, 100, 100, 0.2);    
+    backdrop-filter: blur(6px);
+}
+
+.contact-icon {
+    color: cyan;
+    transition: 0.3s;
+    padding: .5rem;
+    font-style: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-icon:hover {
+    color: aliceblue;
+    transform: scale(1.2);
+}
