@@ -93,7 +93,7 @@ li {
     border-radius: 10px;   
     width: 18vw;
     height: 8vh;
-    min-width: 180px;
+    min-width: 160px;
     text-align: center;
     background-color:royalblue;   
     align-items: center;
@@ -113,7 +113,7 @@ li a:hover {
 section {
     margin: 0;  
     color: aliceblue;
-    min-width: 600px;
+    min-width: 400px;
 }
 
 header {  
@@ -179,7 +179,7 @@ header {
 }
 
 .descripcion {
-    height: 40px;
+    height: 60px;
 }
 
 .descripcion p {
@@ -229,24 +229,27 @@ a h4:active {
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
+    padding-bottom: 15vh;
 }
 
 a i {
     margin: .4rem;
 }
 
-.contact-links {
+.contacto-links {
     display: flex;
     justify-content: center;
     font-size: 1rem;
     overflow: visible;
+    cursor:pointer;
     background-color: brown;
     border-radius: 20px;
     background-color: rgba(40, 100, 100, 0.2);    
     backdrop-filter: blur(6px);
+    margin: 30px;
 }
 
-.contact-icon {
+.contacto-icono {
     color: cyan;
     transition: 0.3s;
     padding: .5rem;
@@ -255,7 +258,31 @@ a i {
     flex-direction: column;
 }
 
-.contact-icon:hover {
+.contacto-icono:hover {
     color: aliceblue;
     transform: scale(1.2);
+}
+
+.notificacion {
+    border-radius: 20px;
+    background-color: rgba(40, 100, 100, 0.2);    
+    backdrop-filter: blur(6px);
+    color: rgb(68, 226, 76);
+    font-size: 0.8rem;
+    position: fixed;
+    z-index: 10;
+    top: 20%;
+    left: 30%;
+    right: 30%;
+    cursor: default;
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.stop-it {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
 }
