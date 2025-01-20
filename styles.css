@@ -56,7 +56,6 @@ body {
     display: grid;
     min-height: 100vh;
     grid-template-columns: 1fr;
-    grid-template-rows: 15vh 85vh auto 85vh;
     margin: 0;
     padding: 0;   
     background-image: url("images/background.jpg");
@@ -70,6 +69,11 @@ body {
 
 [id] {
     scroll-margin-top: 15vh;
+}
+
+header {  
+    margin: 0; 
+    height: 15vh;   
 }
 
 ul {
@@ -110,14 +114,73 @@ li a:hover {
     color: cyan;
 }
 
+.menu-btn {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    header {
+        height: 0;
+    }
+
+    nav {
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        bottom: 12rem;
+        right: 10rem;
+        background-color: rgba(0, 0, 0, 0.9);        
+        z-index: 20;
+        transform: translateY(100%);
+        transition: transform .4s ease-in-out;
+    }    
+
+    ul {
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+        justify-content: flex-start;
+        margin: 0;
+        padding: 1rem;
+        width: fit-content;
+        border-radius: 40px;
+    }
+
+    li {
+        margin: 0.5rem 0;
+        width: 100%;
+        height: auto;
+        font-size: 1rem;
+        padding: 10px 0;
+    }
+
+    .menu-btn {
+        display: block;
+        position: fixed;
+        bottom: 1rem;
+        right: 1rem;
+        background-color: royalblue;
+        color: white;
+        font-size: 1.5rem;
+        border: none;
+        border-radius: 5px;
+        z-index: 30;
+        cursor: pointer;
+        padding: 0.5rem 1rem;
+    }
+
+    .active {
+        transform: translateY(-2rem);
+        opacity: 1;
+    }
+}
+
+
 section {
     margin: 0;  
     color: aliceblue;
     min-width: 400px;
-}
-
-header {  
-    margin: 0;    
 }
 
 #inicio {

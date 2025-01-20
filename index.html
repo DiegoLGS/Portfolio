@@ -17,6 +17,7 @@
     </head>
     <body>    
         <header>
+            <button class="menu-btn">☰</button>
             <nav>
                 <ul>
                     <li><a href="#inicio">Inicio</a></li>
@@ -89,7 +90,15 @@
                             }, 2000);
                         })
                         .catch(err => console.error("Error al copiar el email: ", err));
-                });            
+                });      
+                
+                const menuBtn = document.querySelector('.menu-btn');
+                const nav = document.querySelector('nav');
+
+                menuBtn.addEventListener('click', () => {
+                    nav.classList.toggle('active');
+                });
+
             });
         </script>
     </body>
