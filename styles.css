@@ -129,12 +129,18 @@ li a:hover {
         flex-direction: column;
         position: fixed;
         bottom: 12rem;
-        right: 10rem;
+        right: 8rem;
         background-color: rgba(0, 0, 0, 0.9);        
         z-index: 20;
-        transform: translateY(100%);
-        transition: transform .4s ease-in-out;
-    }    
+        transform: translateY(100%) scale(0.8) translateX(1rem);
+        transition: transform .4s ease-in-out, opacity 0.4s ease-in-out;
+    }   
+    
+    .hidden {
+        transition: none;
+        opacity: 0;
+    }
+    
 
     ul {
         flex-direction: column;
@@ -164,14 +170,14 @@ li a:hover {
         color: white;
         font-size: 1.5rem;
         border: none;
-        border-radius: 5px;
+        border-radius: 12px;
         z-index: 30;
         cursor: pointer;
         padding: 0.5rem 1rem;
     }
 
     .active {
-        transform: translateY(-2rem);
+        transform: translateY(-2.5rem) translateX(-1rem); 
         opacity: 1;
     }
 }
@@ -192,7 +198,7 @@ section {
 
 #foto {
     border-radius: 50%;
-    height: 500px;
+    
     object-fit: cover; 
 }
 
@@ -215,7 +221,6 @@ section {
 
 .card {
     background-color: rgba(40, 100, 100, 0.2);    
-    backdrop-filter: blur(6px);
     width: 540px;
     height: 420px;
     border-radius: 20px;
@@ -226,6 +231,12 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+}
+
+@media (min-width: 768px) {
+    .card {
+        backdrop-filter: blur(6px);
+    }
 }
 
 .imagen-proyecto {   
@@ -263,9 +274,10 @@ a h4:active {
     color: lightblue;
 }
 
-.container-tecnologias {
+.container-tecnologias {    
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -287,7 +299,6 @@ a h4:active {
 
 .logo-estudios {
     background-color: rgba(18, 247, 247, 0.2);    
-    backdrop-filter: blur(6px);
     border-radius: 200px;
     padding: 20px;
     margin: 16px;
