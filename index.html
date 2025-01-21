@@ -51,11 +51,13 @@
             <p>Estoy abierto a nuevas oportunidades y colaboraciones. ¡Gracias por visitar mi portfolio!</p>
         </section>   
 
-        <script src="proyectos.js"></script>
-        <script src="estudio.js"></script>
+        <script src="./js/proyectos.js"></script>
+        <script src="./js/estudio.js"></script>
+        <script src="./js/animacionScroll.js"></script>
         <script>
             desplegarProyectos();
             desplegarEstudiosActuales();
+            animarScroll();
 
             document.addEventListener("DOMContentLoaded", function() {
                 const iconoEmail = document.getElementById("email");
@@ -107,6 +109,7 @@
                 });
 
             });
+
         </script>
     </body>
 </html>
