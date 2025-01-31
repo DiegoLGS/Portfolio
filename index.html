@@ -43,73 +43,28 @@
         <section id="contacto">
             <h2>Contactame a través de:</h2>
             <article class="contacto-links">
-                <a target="_blank" class="contacto-icono" href="https://github.com/DiegoLGS/"><i class="fa-brands fa-github"></i>Github</a>                        
                 <a target="_blank" class="contacto-icono" href="https://www.linkedin.com/in/diego-leonardo-gloria-salas-43b56323a/"><i class="fa-brands fa-linkedin"></i>Linkedin</a>
                 <a class="contacto-icono" id="email" data-email="dlgloriasalas@gmail.com" title="Copiar email"><i class="fa-solid fa-envelope"></i></i>Email</a>
             </article>
-
+            <h2>Mi Github:</h2>
+            <article class="contacto-links">
+                <a target="_blank" class="contacto-icono" href="https://github.com/DiegoLGS/"><i class="fa-brands fa-github"></i>GitHub</a>
+            </article>
+            
             <p>Estoy abierto a nuevas oportunidades y colaboraciones. ¡Gracias por visitar mi portfolio!</p>
         </section>   
 
         <script src="./js/proyectos.js"></script>
         <script src="./js/estudio.js"></script>
         <script src="./js/animacionScroll.js"></script>
+        <script src="./js/email.js"></script>
+        <script src="./js/menu.js"></script>
         <script>
             desplegarProyectos();
             desplegarEstudiosActuales();
             animarScroll();
-
-            document.addEventListener("DOMContentLoaded", function() {
-                const iconoEmail = document.getElementById("email");
-                const direccionEmail = iconoEmail.getAttribute("data-email");
-                let contadorClicks = 0;
-
-                iconoEmail.addEventListener("click", function () {
-                    contadorClicks++;
-                    
-                    navigator.clipboard.writeText(direccionEmail)
-                        .then(() => {
-                            iconoEmail.title = "¡Email copiado!";
-                            const mensajeCopiado = document.createElement("div");
-                            mensajeCopiado.classList.add("notificacion");
-                            mensajeCopiado.textContent = "Email copiado al portapapeles";
-                            document.body.appendChild(mensajeCopiado);
-                            
-                            if(contadorClicks == 6) {
-                                const gifStopIt = document.createElement("img");
-                                gifStopIt.classList.add("stop-it");
-                                gifStopIt.src = "https://media.tenor.com/mZZoOtDcouoAAAAM/stop-it-get-some-help.gif";
-                                document.body.appendChild(gifStopIt);
-                                
-                                setTimeout(function() {
-                                    document.body.removeChild(gifStopIt);
-                                }, 2500);
-                            };
-                        
-                            setTimeout(function() {
-                                document.body.removeChild(mensajeCopiado);
-                                contadorClicks --;
-                            }, 2000);
-                        })
-                        .catch(err => console.error("Error al copiar el email: ", err));
-                });      
-                
-                const menuBtn = document.querySelector('.menu-btn');
-                const nav = document.querySelector('nav');
-
-                menuBtn.addEventListener('click', () => {
-                    nav.classList.toggle('active');
-                    nav.classList.remove('hidden');
-                });
-
-                addEventListener("resize", () => {
-                    if(window.innerWidth <= 768) {
-                        nav.classList.add('hidden');
-                    }
-                });
-
-            });
-
+            eventoClickEmail();
+            controlarMenuHamburguesa();
         </script>
     </body>
 </html>
